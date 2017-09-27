@@ -31,7 +31,9 @@ export class GalleryComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.resize(window.innerWidth)
+    if (typeof window !== 'undefined') {
+      this.resize(window.innerWidth);
+    }
   }
 
 }

@@ -16,7 +16,7 @@ import {OrderBy} from './filters/orderby';
 import { FooterComponent } from './footer/footer.component';
 import { TournamentComponent } from './tournament/tournament.component';
 import { CountdownComponent } from './countdown/countdown.component';
-import {ScrollToModule} from 'ng2-scroll-to';
+import {ScrollToModule} from './system/index';
 
 
 // import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';

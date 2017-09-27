@@ -30,7 +30,9 @@ export class CarouselComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.resize(window.innerWidth, window.innerHeight)
+    if (typeof window !== 'undefined') {
+      this.resize(window.innerWidth, window.innerHeight);
+    }
   }
 
   animate(elem, style, unit, from, to, time, prop) {
