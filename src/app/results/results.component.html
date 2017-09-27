@@ -1,0 +1,83 @@
+<div class="page bg">
+  <div class="container">
+    <app-title title="Results" description="Last Results" icon="vectorsmartobject2"></app-title>
+
+    <div class="row justify-content-between">
+      <div class="col">
+        <div class="d-none d-sm-block">
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th>Date</th>
+              <th>Location</th>
+              <th>Competition</th>
+              <th>Category</th>
+              <th>Position</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let item of results | orderBy: '-date'">
+              <td>{{item.date | date:medium}}</td>
+              <td>{{item.place}}</td>
+              <td>
+                <div style="font-size:1.2em; margin-bottom: 5px">{{item.competition}}</div>
+
+                <div *ngIf="item.details" class="small" style="margin-bottom: 10px;">{{item.details}}</div>
+              </td>
+              <td class="">
+                <div *ngIf="isArray(item.category)">
+                  <div *ngFor="let r of item.category">{{r}}</div>
+                </div>
+                <div *ngIf="!isArray(item.category)">
+                  {{item.category}}
+                </div>
+              </td>
+              <td>
+
+                <div *ngIf="isArray(item.rank)">
+                  <div *ngFor="let r of item.rank">{{r}}</div>
+                </div>
+                <div *ngIf="!isArray(item.rank)">
+                  {{item.rank}}
+                </div>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="d-block d-sm-none">
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th>Competition</th>
+              <th class="text-right">Position</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let item of results | orderBy: '-date'">
+              <td>
+                <div style="font-size:1.2em; margin-bottom: 5px">{{item.competition}}</div>
+
+                <div *ngIf="item.details" class="small" style="margin-bottom: 10px;">{{item.details}}</div>
+                <div style="margin-top:5px"><i class="icon-calendar-light"></i>{{item.date | date:medium}}</div>
+
+                <div style="margin-top:5px"><i class="icon-trx-pin60"></i>{{item.place}}. place</div>
+              </td>
+
+              <td>
+                <div *ngIf="isArray(item.rank)">
+                  <div *ngFor="let itm of item.rank; let i = index">{{item.category[i]}}: {{itm}}. place</div>
+                </div>
+                <div *ngIf="!isArray(item.rank)">
+                  {{item.category}}: {{item.rank}}
+                </div>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

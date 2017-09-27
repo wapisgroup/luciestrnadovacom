@@ -1,0 +1,48 @@
+<div class="bg ">
+  <nav class="d-none d-sm-block desktop">
+    <ul>
+      <li><a scrollTo href="#home" title="">Home</a></li>
+      <li><a scrollTo href="#about-me" title="">About me</a></li>
+      <li><a scrollTo href="#my-bag" title="">My Bag</a></li>
+      <li><a scrollTo href="#news" title="">News</a></li>
+      <li><a scrollTo href="#results" title="">Results</a></li>
+      <li><a scrollTo href="#gallery" title="">My Gallery</a></li>
+      <li><a scrollTo href="#contact" title="">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="logo">
+    <a scrollTo href="#home">
+      <picture>
+        <source media="(max-width: 900px)" srcset="assets/images/logo-small.svg">
+        <source media="(min-width: 901px)" srcset="assets/images/logo.svg">
+        <img src="assets/images/logo-small.svg" alt="Lucy golfer">
+      </picture>
+    </a>
+  </div>
+</div>
+
+
+<button class="burger-menu d-sm-none " type="button" (click)="toggle()">
+  <i class="icon-menu"></i>
+</button>
+<nav class="d-sm-none mobile" [ngClass]="{'opened': opened}">
+  <div class="nav_bg">
+    <div class="head">
+      <img src="/assets/images/logo-no-border.svg" title="Logo - Lucie Strnadova" alt="logo"/>
+      <button class="close" (click)="toggle()">
+        <i class="icon-cancel"></i>
+      </button>
+    </div>
+    <ul>
+      <li><a (click)="toggle()" scrollTo href="#home" title="">Home</a></li>
+      <li><a (click)="toggle()" scrollTo href="#about-me" title="">About me</a></li>
+      <li><a (click)="toggle()" scrollTo href="#my-bag" title="">My Bag</a></li>
+      <li><a (click)="toggle()" scrollTo href="#news" title="">News</a></li>
+      <li><a (click)="toggle()" scrollTo href="#results" title="">Results</a></li>
+      <li><a (click)="toggle()" scrollTo href="#gallery" title="">My Gallery</a></li>
+      <li><a (click)="toggle()" scrollTo href="#contact" title="">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+

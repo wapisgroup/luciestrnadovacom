@@ -1,0 +1,19 @@
+.bg {
+  background: #282828;
+  color: #F8F8F8;
+  padding-bottom: 50px;
+}
+
+h2 {
+  color: #FFF;
+}
+
+.content {
+  font-size: 0.9em;
+}
+
+@media (max-width: 767px) {
+  table.table {
+    margin-top: 20px;
+  }
+}

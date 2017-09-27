@@ -1,0 +1,13 @@
+<div class="page" *ngIf="result !== null">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-7">
+        <span class="next">Next tournament</span>
+        <h3>{{result.title}}</h3>
+      </div>
+      <div class="col-sm-5">
+        <app-countdown inputDate="{{result.date | date:'MMMM d, y H:mm:ss'}}"></app-countdown>
+      </div>
+    </div>
+  </div>
+</div>

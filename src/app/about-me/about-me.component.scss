@@ -1,0 +1,19 @@
+.content {
+  font-size: 0.9em;
+}
+p.about-me {
+  font-style: italic;
+  font-family: 'Martel', serif;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+  .img-wrapper {
+    text-align: center;
+    img {
+      max-width: 200px;
+      margin: 0 auto 20px;
+    }
+  }
+
+}

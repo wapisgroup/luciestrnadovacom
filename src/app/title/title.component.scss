@@ -1,0 +1,98 @@
+h2 {}
+p.title {
+  text-align: center;
+  font-style: italic;
+  color: #9c9da1;
+  font-family: 'Martel', serif;
+}
+
+.sc_section {
+  margin-bottom: 20px;
+  .sc_section_inner {
+    .sc_section_content_wrap {
+      .sc_iconseparator {
+        .sc_iconseparator_item {
+
+          align-items: center;
+          display: flex;
+          flex-flow: row nowrap;
+
+          .sc_iconseparator_holder {
+            flex: 1 1 auto;
+            height: 1px;
+            min-width: 10%;
+            position: relative;
+
+            &.sc_iconseparator_holder_left,
+            &.sc_iconseparator_holder_right {
+              .sc_iconseparator_line {
+                background: url(/assets/images/separator1.gif) bottom repeat-x;
+                display: block;
+                height: 1px;
+                position: relative;
+                top: 1px;
+                width: 100%;
+              }
+
+            }
+          }
+
+          .sc_iconseparator_element_outer {
+            box-sizing: border-box;
+            line-height: 0;
+
+            .sc_iconseparator_element_iner {
+              border: 2px solid transparent;
+              box-sizing: content-box;
+              display: inline-block;
+              position: relative;
+              text-align: center;
+              width: 5.5em;
+              height: 5.5em;
+              line-height: 5.5em;
+              .icon-vectorsmartobject {
+
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//
+//.sc_iconseparator {
+//}
+//
+//.sc_iconseparator_item {
+//
+//}
+//
+//.sc_iconseparator_holder {
+//
+//}
+//
+//.sc_iconseparator_line {
+//  /*border-top: 1px solid #ebebeb;*/
+//
+//}
+//
+//.vc_row.inverse_colors .sc_iconseparator_line {
+//  background: url(/assets/images/separator2.gif) bottom repeat-x;
+//}
+//
+//.vc_row.inverse_colors .icons1 .sc_iconseparator_line {
+//  background: url(/assets/images/separator1.gif) bottom repeat-x;
+//}
+//
+//.sc_iconseparator_element_outer {
+//
+//}
+//
+//.sc_iconseparator_element_iner {
+//
+//}
+//
+//.sc_iconseparator {
+//}

@@ -1,0 +1,44 @@
+ul {
+  margin: 0;
+  padding:0;
+  list-style: none;
+
+  li {
+    padding:0;
+    margin:0;
+    display: inline-block;
+
+    &.num {
+      display: inline-block;
+      margin-right: 2px;
+      border-radius: 3px;
+      line-height: 1.567em;
+      color: #fff;
+      background: #282828;
+      text-align: center;
+      font-size: 1.8em;
+      padding: 0 10px;
+      width: 53px;
+      position: relative;
+
+      &:after {
+        position: absolute;
+        content: attr(title);
+        top: 31px;
+        left: 0;
+        font-size: 12px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #9c9da1;
+        margin-top: 0.5em;
+        right: 0;
+        text-align: center;
+
+      }
+    }
+
+    &.sep {
+      font-size: 2.1em;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.page {
+  padding-bottom: 50px;
+
+
+}
+
+h3 {
+  font-size: 1.4em;
+  line-height: normal;
+  color: #282828;
+  transition: color 0.5s ease 0s;
+  margin-top: 0.175em;
+  position: relative;
+  padding-left: 60px;
+  margin-bottom: 0.2em;
+
+  &:after {
+    content: attr(data-day);
+    position:absolute;
+    left: 0;
+    top: -3px;
+    text-transform: uppercase;
+    color: #7fd4a7;
+    font-size:1.4em;
+    width: 50px;
+    text-align: center;
+  }
+  &:before {
+    content: attr(data-month);
+    position:absolute;
+    left: 0;
+    top: 35px;
+    text-transform: uppercase;
+    color: #7fd4a7;
+    font-size:0.6em;
+    width: 50px;
+    text-align: center;
+  }
+}
+
+
+p {
+  margin-left: 60px;
+  color: #9c9da1;
+  font-weight: 100;
+  font-family: 'Crimson Text';
+  font-style: italic;
+  line-height: 1.4em;
+}
