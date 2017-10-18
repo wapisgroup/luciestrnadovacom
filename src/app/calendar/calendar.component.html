@@ -1,0 +1,7 @@
+<div class="container">
+  <app-title title="Calendar" description="Event calendar" icon="vectorsmartobject"></app-title>
+</div>
+<div class="wrapper">
+
+  <cal-month  [date]="month" [tournaments]="tourSubject" *ngFor="let month of list"></cal-month>
+</div>

@@ -18,7 +18,7 @@ export class TournamentComponent implements OnInit {
   result = null;
 
   ngOnInit() {
-    this._contentfulService.getTournaments()
+    this._contentfulService.getTournaments({order: 'fields.date'})
       .then(results => {
         let found = null;
         for (let itm of results) {

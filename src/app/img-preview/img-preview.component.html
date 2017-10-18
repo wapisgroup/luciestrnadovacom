@@ -1,0 +1,18 @@
+<div
+  class="preview-wrapper"
+  *ngIf="img !== null"
+>
+  <div
+    class="inner"
+    [style.max-width.px]="img.width + 40"
+    [style.max-height.px]="img.height + 40"
+  >
+    <img src="{{img.url}}" class="img-preview" *ngIf="img.type =='image'">
+    <video width="{{img.width}}" controls *ngIf="img.type =='video'" poster="{{img.url}}">
+      <source src="{{img.video}}" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+    <i class="icon-plus close" (click)="close()"></i>
+  </div>
+
+</div>

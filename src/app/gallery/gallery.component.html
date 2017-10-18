@@ -2,11 +2,30 @@
   <div class="container">
     <app-title title="Gallery" description="I little bit of me" icon="vectorsmartobject3"></app-title>
 
-    <div class="row">
-      <!-- SnapWidget -->
-      <script src="https://snapwidget.com/js/snapwidget.js"></script>
-      <iframe src="https://snapwidget.com/embed/435995" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%;" [style.height]="height"></iframe>
-    </div>
+    <!--<div class="row">-->
+    <!--&lt;!&ndash; SnapWidget &ndash;&gt;-->
+    <!--<script src="https://snapwidget.com/js/snapwidget.js"></script>-->
+    <!--<iframe src="https://snapwidget.com/embed/435995" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%;" [style.height]="height"></iframe>-->
+    <!--</div>-->
 
+    <app-img-preview></app-img-preview>
+    <section id="photos" *ngIf="isMobile === false">
+      <div class="img" *ngFor="let img of images">
+        <img src="{{img.images.standard_resolution.url}}" />
+        <i *ngIf="img.videos == undefined" class="icon icon-search-light" (click)="preview(img, 'image');"></i>
+        <i *ngIf="img.videos !== undefined" class="icon icon-play"  (click)="preview(img, 'video');"></i>
+      </div>
+    </section>
+
+    <section id="photos" *ngIf="isMobile === true">
+      <div class="img" *ngFor="let img of images">
+        <img src="{{img.images.low_resolution.url}}" *ngIf="img.videos == undefined" />
+
+        <video width="{{img.width}}" controls *ngIf="img.videos !== undefined" poster="{{img.images.standard_resolution.url}}">
+          <source src="{{img.videos.standard_resolution.url}}" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+      </div>
+    </section>
   </div>
 </div>

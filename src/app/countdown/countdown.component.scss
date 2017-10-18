@@ -18,7 +18,7 @@ ul {
       text-align: center;
       font-size: 1.8em;
       padding: 0 10px;
-      width: 53px;
+      min-width: 53px;
       position: relative;
 
       &:after {

@@ -11,7 +11,9 @@ const DEFAULT_CONFIG = {
   contentTypeIds: {
     tournaments: 'tournament',
     results: 'results',
-    news: 'news'
+    news: 'news',
+    about: 'about',
+    aboutFacts: 'aboutFacts'
   }
 };
 
@@ -50,6 +52,21 @@ export class ContentfulService {
       })
   }
 
+  // fetch about
+  getAbout(query?: object): Promise<Entry<any>[]> {
+    return this.cdaClient.getEntries(Object.assign({
+      content_type: DEFAULT_CONFIG.contentTypeIds.about
+    }, query))
+      .then(res => res.items);
+  }
+
+  // fetch facts
+  getAboutFacts(query?: object): Promise<Entry<any>[]> {
+    return this.cdaClient.getEntries(Object.assign({
+      content_type: DEFAULT_CONFIG.contentTypeIds.aboutFacts
+    }, query))
+      .then(res => res.items);
+  }
   // fetch results
   getResults(query?: object): Promise<Entry<any>[]> {
     return this.cdaClient.getEntries(Object.assign({

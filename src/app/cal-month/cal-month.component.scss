@@ -1,0 +1,33 @@
+.calendar_wrap {
+  .title {
+    font-size: 12px;
+    text-align: center;
+  }
+  width: 250px;
+  thead {
+    th {
+      font-size: 10px;
+      text-align: center;
+    }
+  }
+  tbody {
+    td > div {
+      border: 1px solid #efefef;
+      border-radius: 4px;
+      padding: 15px;
+      position: relative;
+
+      &.highlight {
+        background: #7fd4a7;
+      }
+
+      & > span {
+        position: absolute;
+        top: 3px;
+        right: 5px;
+        text-align: right;
+        font-size: 9px;
+      }
+    }
+  }
+}

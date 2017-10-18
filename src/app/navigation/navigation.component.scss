@@ -75,15 +75,15 @@ div.logo {
 nav.mobile {
   position: fixed;
   top: 0;
-  left: -100%;
+  transform: translateX(-100%);
   width: 100%;
   background: rgba(0, 0, 0, 0.8);
   bottom: 0;
   z-index: 110;
-  transition: left 0.5s;
+  transition: all 0.3s;
 
   &.opened {
-    left: 0;
+    transform: translateX(0%);
   }
 
   .nav_bg {

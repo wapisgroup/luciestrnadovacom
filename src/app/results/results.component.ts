@@ -16,7 +16,7 @@ export class ResultsComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this._contentfulService.getResults({order: 'fields.date'})
+    this._contentfulService.getResults({order: '-fields.date'})
       .then(results => {
 
         this.results = results.map(res => {

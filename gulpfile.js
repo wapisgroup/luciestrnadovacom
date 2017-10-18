@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-//var exec = require('gulp-exec');
+// var exec = require('gulp-exec');
 var gutil = require('gulp-util');
 var ftp = require('gulp-ftp');
 var exec = require('child_process').exec;
